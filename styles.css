@@ -674,6 +674,7 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: translateX(-50%) translateY(-50%);
 }
 .close-btn {
   position: absolute;
@@ -681,8 +682,7 @@ body {
   width: 30px;
   height: 30px;
   background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  right: 8px;
   cursor: pointer;
 }
 .backdrop {
@@ -697,11 +697,82 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%) translateY(-50%);
   width: 528px;
   min-height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition-property: transform, visibility, opacity;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+.header-agencja:hover,
+.header-agencja:focus {
+  cursor: pointer;
+  color: #2196f3;
+}
+.header-portfolio:hover,
+.header-portfolio:focus {
+  cursor: pointer;
+  color: #2196f3;
+}
+.header-kontakt:hover,
+.header-kontakt:focus {
+  cursor: pointer;
+  color: #2196f3;
+}
+.header-agencja::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: #2196f3;
+  width: 100%;
+  border-radius: 2px;
+  bottom: -33px;
+  left: 0px;
+}
+
+.header-agencja {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  text-align: left;
+  color: inherit;
+}
+.header-portfolio {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  font-family: inherit;
+  text-align: left;
+  color: inherit;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-portfolio::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  height: 4px;
+  background-color: #2196f3;
+  width: 100%;
+  border-radius: 2px;
+  bottom: -33px;
+  left: 0px;
 }
