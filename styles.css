@@ -571,6 +571,7 @@ body {
   width: 206px;
   height: 80px;
   margin-top: 72px;
+  margin-right: 78px;
 }
 .iconbot {
   width: 44px;
@@ -780,4 +781,9 @@ body {
   border-radius: 2px;
   bottom: -33px;
   left: 0px;
+}
+.formbox {
+  position: absolute;
+  width: 570px;
+  height: 86px;
 }
