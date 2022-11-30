@@ -357,6 +357,18 @@ body {
 .textbox {
   margin-right: 30px;
 }
+.imgbox {
+  position: relative;
+  display: flex;
+  align-content: center;
+  margin-right: 30px;
+}
+.nextbox {
+  position: relative;
+  display: flex;
+  align-content: center;
+  margin-right: 30px;
+}
 .figure {
   margin-left: 0px;
   margin-bottom: 0px;
@@ -786,4 +798,16 @@ body {
   position: absolute;
   width: 570px;
   height: 86px;
+}
+.textsec {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  color: #ffffff;
+  position: absolute;
+  bottom: 27px;
+  z-index: 1;
+  width: 370px;
+  text-align: center;
 }
